@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    .calculator {
+      width: 200px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter number 1">
+    <input type="number" id="num2" placeholder="Enter number 2">
+    <input type="submit" value="Sum" onclick="calculateSum()">
+    <input type="submit" value="Product" onclick="calculateProduct()">
+    <input type="submit" value="Difference" onclick="calculateDifference()">
+    <input type="submit" value="Quotient" onclick="calculateQuotient()">
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculateSum() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var sum = num1 + num2;
+      document.getElementById('result').innerHTML = "Sum: " + sum;
+    }
+
+    function calculateProduct() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var product = num1 * num2;
+      document.getElementById('result').innerHTML = "Product: " + product;
+    }
+
+    function calculateDifference() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var difference = num1 - num2;
+      document.getElementById('result').innerHTML = "Difference: " + difference;
+    }
+
+    function calculateQuotient() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var quotient = num1 / num2;
+      document.getElementById('result').innerHTML = "Quotient: " + quotient;
+    }
+  </script>
+</body>
+</html>
