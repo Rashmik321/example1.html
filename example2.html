@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Squares and Cubes Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <h2>Squares and Cubes Table</h2>
+
+  <table>
+    <tr>
+      <th>Number</th>
+      <th>Square</th>
+      <th>Cube</th>
+    </tr>
+    <!-- Generating table rows dynamically using JavaScript -->
+  </table>
+
+  <script>
+    var table = document.querySelector('table');
+    for (var i = 0; i <= 10; i++) {
+      var row = document.createElement('tr');
+      var numCell = document.createElement('td');
+      var squareCell = document.createElement('td');
+      var cubeCell = document.createElement('td');
+
+      numCell.textContent = i;
+      squareCell.textContent = Math.pow(i, 2);
+      cubeCell.textContent = Math.pow(i, 3);
+
+      row.appendChild(numCell);
+      row.appendChild(squareCell);
+      row.appendChild(cubeCell);
+      table.appendChild(row);
+    }
+  </script>
+</body>
+</html>
